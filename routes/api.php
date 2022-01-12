@@ -16,3 +16,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::middleware(['cors'])->group(function () {
+    Route::get('/old_customers', 'CustomerController@index');
+    Route::get('/customers', 'CustomerController@phoneNumbers');
+    Route::get('/countries', 'CountryController@index');
+});
+
