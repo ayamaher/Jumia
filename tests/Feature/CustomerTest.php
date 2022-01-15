@@ -51,7 +51,7 @@ class CustomerTest extends APITest
         $response = $this->json('get', 'api/customers?country=Ethiopia&state=OK');
         $phoneNumbers = $response->json();
 
-        $this->assertPhoneNumbers($phoneNumbers, 'NOK');
+        $this->assertPhoneNumbers($phoneNumbers, 'OK');
         $response->assertStatus(200);
         $this->assertCount(7, $phoneNumbers);
     }
