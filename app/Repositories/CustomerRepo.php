@@ -33,8 +33,9 @@ class CustomerRepo extends Repository
                         $customer->code = $country['code'];
                         (preg_match($country['regex'], $customer['phone'])) ? $customer->state = "OK" : $customer->state = "NOK";
                     }
+                    $customer->phone = str_replace( $country['codeRegex'], '', $customer->phone);
                 };
-                $customer->phone =  strstr($customer->phone, ') ', false);
+
                 return $customer;
             });
         }
