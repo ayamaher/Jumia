@@ -1,0 +1,6 @@
+From [32mapp/Repositories/CustomerRepo.php:39[39m:
+    [34m37[39m: [33m                return [39m$customer[33m;[39m
+    [34m38[39m: [33m            });[39m
+  [31m>[39m [34m39[39m: [33m            eval([39m\Psy\sh[33m());[39m
+    [34m40[39m: [33m        }[39m
+    [34m41[39m: [33m        return [39m$result[33m;[39m
